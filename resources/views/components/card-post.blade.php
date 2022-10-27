@@ -6,7 +6,7 @@
             <p>@each('components.category.item', $post->category, 'category', 'components.category.no-item')</p>
         </div>
         <div class="card-footer">
-            <a href="{{ route('posts.show', $post->id) }}" class="btn btn-primary">Acessar</a>
+            <a href="#" class="btn btn-primary">Acessar</a>
         </div>
     </div>
 </div>

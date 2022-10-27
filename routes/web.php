@@ -22,6 +22,6 @@ Route::get('/', function () {
 Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::resource('posts', PostController::class, ['except' => ['show']]);
-    Route::resource('categories', CategoryController::class, ['except' => ['show']]);
+    Route::resource('posts', PostController::class)->except(['show']);
+    Route::resource('categories', CategoryController::class)->except(['show']);
 });
